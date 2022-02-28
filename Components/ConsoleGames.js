@@ -1,11 +1,11 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import TouchButton from './TouchButton';
 import data from '../game_list.json'
 
 
 export default function ConsoleGames({ navigation }) {
     return (
-        <View style={styles.view}>
+        <SafeAreaView style={styles.view}>
 
             <FlatList
                 style={styles.list}
@@ -21,7 +21,7 @@ export default function ConsoleGames({ navigation }) {
                 }}
                 keyExtractor={(item) => item.name}
             />
-        </View>
+        </SafeAreaView>
     )
 }
 

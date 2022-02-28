@@ -20,7 +20,9 @@ function DetailsScreen({ navigation, route }) {
                 </Text>
                 <Image
                     style={styles.imgView}
-                    source={item.image}
+                    source={{
+                        uri: item.image
+                    }}
                 />
                 <Text style={styles.subHeader}>
                     Rating: {item.rating}

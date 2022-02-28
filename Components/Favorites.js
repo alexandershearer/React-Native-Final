@@ -1,9 +1,21 @@
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { connect } from 'react-redux';
 
-export default function FavoriteGames({ navigation }) {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Favorites</Text>
-        </View>
-    )
+class FavoritesScreen extends React.Component {
+    render() {
+        return (
+            <SafeAreaView style={styles.view}>
+                <FlatList style={styles.list} >
+
+                </FlatList>
+            </SafeAreaView>
+        );
+    }
 }
+
+const mapStateToProps = (state) => ({
+
+})
+
+export default connect(mapStateToProps)(FavoritesScreen);
