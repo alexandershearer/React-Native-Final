@@ -1,17 +1,12 @@
-import { combineReducers } from 'redux';
+import { NEW_FAVORITE } from '../Actions'
 
-
-const INITIAL_STATE = {
-    current: [],
-};
-
-const favoritesReducer = (state = INITIAL_STATE, action) => {
+const favoritesReducer = (state = [], action) => {
     switch (action.type) {
-        default:
-            return state
-    }
-};
+        case NEW_FAVORITE:
 
-export default combineReducers({
-    favorites: favoritesReducer
-})
+            return [...state,]
+    }
+}
+
+
+export default favoritesReducer
