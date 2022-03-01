@@ -8,6 +8,10 @@ export default function PcGames({ navigation }) {
     return (
         <SafeAreaView style={styles.view}>
 
+            <View>
+                <Text style={styles.header}>PC Games</Text>
+            </View>
+
             <FlatList
                 style={styles.list}
                 data={data.filter(game => game.platform.includes("PC"))}
@@ -27,6 +31,11 @@ export default function PcGames({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+    header: {
+        fontSize: 28,
+        textDecorationLine: "underline",
+        color: '#fff'
+    },
     buttons: {
         width: "100%",
         marginBottom: 10,
@@ -38,6 +47,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
+        backgroundColor: "#000",
     },
 
     list: {

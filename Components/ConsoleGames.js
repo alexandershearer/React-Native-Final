@@ -7,9 +7,15 @@ export default function ConsoleGames({ navigation }) {
     return (
         <SafeAreaView style={styles.view}>
 
+            <View>
+                <Text style={styles.header}>
+                    Xbox and PlayStation
+                </Text>
+            </View>
+
             <FlatList
                 style={styles.list}
-                data={data.filter(game => game.platform.includes("Xbox") || game.platform.includes("Playstation"))}
+                data={data.filter(game => game.platform.includes("Xbox") || game.platform.includes("PlayStation"))}
                 renderItem={({ item, index }) => {
 
                     return (
@@ -26,6 +32,11 @@ export default function ConsoleGames({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+    header: {
+        fontSize: 28,
+        textDecorationLine: "underline",
+        color: "#fff",
+    },
     buttons: {
         width: "100%",
         marginBottom: 10,
@@ -37,6 +48,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
+        backgroundColor: "#000",
     },
 
     list: {

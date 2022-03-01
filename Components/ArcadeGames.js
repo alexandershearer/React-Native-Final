@@ -7,9 +7,15 @@ export default function ArcadeGames({ navigation }) {
     return (
         <SafeAreaView style={styles.view}>
 
+            <View>
+                <Text style={styles.header}>
+                    Other Games
+                </Text>
+            </View>
+
             <FlatList
                 style={styles.list}
-                data={data.filter(game => game.platform.includes("Dreamcast") || game.platform.includes("Nintendo 64"))}
+                data={data.filter(game => game.platform.includes("Dreamcast") || game.platform.includes("Nintendo 64") || game.platform.includes("GameCube") || game.platform.includes("Wii U") || game.platform.includes("Switch") || game.platform.includes("Game Boy Advance") || game.platform.includes("Wii") || game.platform.includes("3DS"))}
                 renderItem={({ item, index }) => {
 
                     return (
@@ -26,6 +32,12 @@ export default function ArcadeGames({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+    header: {
+        fontSize: 28,
+        textDecorationLine: "underline",
+        color: "#fff"
+    },
+
     buttons: {
         width: "100%",
         marginBottom: 10,
@@ -37,6 +49,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
+        backgroundColor: "#000"
     },
 
     list: {

@@ -17,12 +17,13 @@ const styles = StyleSheet.create({
     TouchableHighlight: {
         padding: 20,
         borderBottomWidth: 1,
+        borderColor: '#fff',
     },
 
     text: {
         fontSize: 20,
         fontFamily: "Futura",
-        color: "#000",
+        color: "#fff",
         textAlign: 'center',
     },
 });
